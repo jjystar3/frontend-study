@@ -10,14 +10,52 @@
 -->
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
+  <!-- 정리된 코드 만들기(alt + shift + f):
+   코드 정렬 기능인데 권장X, 의존도가 높아지면 안좋음
+   처음부터 깔끔하게 작업하는 습관을 들이자.
+   코드가 지저분하면 가독성 떨어지고 에러 발생 확률 증가함.
+  -->
+  <!-- 태그 이름을 한번에 변경하기(설정(ctrl + ,) -> linked editing) -->
+  <!-- 
+		파일 탭 우측에 나타나는 흰색 동그라미는 현재 파일의 변경 사항이 저장되지 않았음을 나타냄
+		에디터가 의도치 않게 종료되거나 변경 사항을 반영하고 싶을때는 중간중간 저장하는 습관을 들이는 것이 좋음
+		단축키: ctrl + s 또는 프로젝트 전체 저장 시 ctrl + k, s 
+	-->
+  <span>Hello world!</span>
+  <div>Hello world!</div>
+  <div>Hello world!</div>
+  <div>Hello world!</div>
   <div>Hello world!</div>
 
   <!-- 브라우저에 출력하기(Extensions -> live server 설치) alt + l + o -->
+  <!--
+  Live Server 기능은 개발을 위해 임시로 로컬(자신의 컴퓨터 환경) 서버를 오픈하는 것
+  외부 사람들이 접속하게 하려면 해당 프로젝트를 AWS, Netlify, 카페24 같은 호스팅 서버에 업로드 
+  -->
 </body>
+
 </html>
+<!-- VS Code 단축키 정리
+  1) 사이드 바 열고 닫기: ctrl + b
+  2) 빠른 열기(파일이나 기호 검색): ctrl + p
+  3) 모든 명령 표시(명령 팔레트): ctrl + shift + p 또는 F1
+  4) 탭 닫기: ctrl + w, 모든 탭 닫기: ctrl + k + w
+  5) 검색: ctrl + f, 프로젝트 전체 검색: ctrl + shift + f
+  6) 바꾸기: ctrl + h
+  7) 라인 이동: alt + up/down
+  8) 라인 복사: ctrl + c 또는 alt + shift + up/down
+  9) 들여쓰기: tab, 내어쓰기: shift + tab
+  10) 이전/다음 탭 열기: ctrl + PgUp/PgDn 또는 ctrl + tab
+  11) 편집기 분할: ctrl + \ 또는 ctrl + alt + left/right
+  12) 다중 선택: ctrl + d 또는 ctrl + alt + up/down 또는 alt + 마우스 클릭/드래그
+  13) 라인 삭제: ctrl + shift + k
+  14) 주석: ctrl + / 
+-->
