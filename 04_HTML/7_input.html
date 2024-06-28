@@ -135,7 +135,65 @@
   <!-- 시간 -->
   <label for="time">시간 선택:</label>
   <input type="time" id="time">
-  <br>  
+  
+  <hr>
+  
+  <!-- 이메일: submit 시 자동으로 이메일 형식 유호성 검사를 해줌 -->
+  <form action="/signup">
+    <label for="email">이메일 입력:</label>
+    <input type="email" id="email" name="email">
+    <button type="submit">가입</button>
+  </form>
+
+  <hr>
+
+  <!-- 파일 첨부 -->
+  <label for="myfile">파일 선택:</label>
+  <input type="file" id="myfile">
+  <br>
+  <label for="myfile">다중 파일 선택:</label>
+  <input type="file" id="myfile" multiple>
+  <br>
+
+  <hr>
+
+  <!-- 범위 선택(기본값: 0~100) -->
+  <label for="volume">음량(0~10):</label>
+  <input type="range" id="volume" min="0" max="10" step="2">
+
+  <!-- (참고) -->
+  <span id="volumeValue"></span>
+  <script>
+    const volumeEl = document.querySelector('#volume');
+    const volumeValueEl = document.querySelector('#volumeValue');
+    volumeValueEl.textContent = volumeEl.value;
+    volumeEl.addEventListener('change', function () {
+      console.log('change 이벤트 발생!!');
+      volumeValueEl.textContent = volumeEl.value;
+    });
+  </script>
+
+  <hr>
+
+  <!-- 비밀번호 -->
+  <label for="pwd">비밀번호:</label>
+  <input type="password" id="pwd" maxlength="10">
+
+  <hr>
+
+  <!-- 셀렉트 박스(콤보 박스) -->
+  <!-- 속성
+    value: 서버로 전송되는 선택한 항목의 실제값
+    selected: 항목을 미리 선택
+  -->
+  <label for="cars">차량 선택:</label>
+  <select id="cars">
+    <option value="">선택</option>
+    <option value="volvo">Volvo</option>
+    <option value="benz">Benz</option>
+    <option value="audi" selected>Audi</option>
+  </select>
+
 
 </body>
 </html>
