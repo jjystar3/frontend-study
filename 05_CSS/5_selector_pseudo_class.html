@@ -71,12 +71,24 @@
     /* .fruits *:nth-child(2n) {
       color: red;
     } */
+    /* .fruits *:nth-child(even) {
+      color: red;
+    } */
 
     /* .fruits *:nth-child(2n+1) {
       color: red;
     } */
+    /* .fruits *:nth-child(odd) {
+      color: red;
+    } */
+
+    /* .fruits *:nth-child(n+2) {
+      color: red;
+    } */
     
-    .fruits *:nth-child(n+2) {
+    /* Quiz: 자식들 중 앞에 3개만 선택 */
+    /* n이 앞에 나와야 동작!! */
+    .fruits *:nth-child(-n+3) {
       color: red;
     }
     
