@@ -88,10 +88,14 @@
     
     /* Quiz: 자식들 중 앞에 3개만 선택 */
     /* n이 앞에 나와야 동작!! */
-    .fruits *:nth-child(-n+3) {
+    /* .fruits *:nth-child(-n+3) {
+      color: red;
+    } */
+    
+    /* :not(s) (선택자 s를 제외) */
+    .fruits *:not(span, h3) {
       color: red;
     }
-    
   </style>
 </head>
 <body>
