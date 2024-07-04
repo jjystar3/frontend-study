@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* 가상 요소 선택자: HTML에 가상의 요소를 생성 또는 제어 가능 */
+    /* 
+      ::before, ::after 사용 시
+      반드시 CSS의 content 속성과 같이 사용
+    */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+
+    /* ::before (요소의 내부 앞에 내용 삽입) */
+    /* .box::before {
+      content: "앞!";
+    } */
+
+    /* ::after (요소의 내부 뒤에 내용 삽입) */
+    /* .box::after {
+      content: "뒤!";
+    } */
+
+    /* 꼭 텍스트가 아니여도 됨!
+      근데 content 속성은 ""로 값을 비워두더라도 필수 작성
+    */
+    .box::after {
+      content: "";
+      width: 10px;
+      height: 30px;
+      background-color: royalblue;
+      /* 가상 요소는 인라인 요소이기 때문에 가로/세로 길이 지정이 불가 => 블록 요소로 전환 */
+      display: block;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+    }
+    .menu li {
+      position: relative;
+    }
+    .menu li + li::before {
+      content: "";/*필수 속성*/
+      display: block;
+      width: 1px;
+      height: 12px;
+      background-color: #555;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .menu li a{
+      text-decoration: none;
+      color: #656565;
+      padding: 0 15px;
+    }
+    .menu li a:hover{
+      text-decoration: underline;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    Content!
+  </div>
+
+  <hr>
+
+  <!-- Tip! 메뉴 항목 사이에 세로바 넣기 -->
+  <ul class="menu">
+    <li><a href="#">회사소개</a></li>
+    <li><a href="#">인재채용</a></li>
+    <li><a href="#">제휴제안</a></li>
+    <li><a href="#">이용약관</a></li>
+    <li><a href="#">고객센터</a></li>
+  </ul>
+</body>
+</html>
