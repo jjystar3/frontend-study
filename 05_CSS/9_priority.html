@@ -4,8 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <style>
+    /* 라이브러리에서 적용된 스타일을 커스텀 하고자 한다면 최소한 동일한 우선 순위 점수 이상으로 지정 */
+    
+    /* 우선순위 점수가 낮은것부터 실습 */
+    /* body(상속) -> * -> 태그 -> 클래스 -> 아이디 -> 인라인 -> !important */
+
+    div {
+      /* 정말 이 스타일이 무조건 적용되어야 하거나 절대 변경되어서는 안되는 경우에만 사용! */
+      color: red !important;
+    }
+
+    #hello {
+      color: yellow;
+    }
+
+    /* .hello {
+      color: orange;
+    } */
+    /* 선택자를 여러개 사용하여 명확하게 선택하면 우선순위 점수가 올라감 */
+    div.hello {
+      color: orange;
+    }
+
+    /* 점수가 같으면 가장 마지막에 해석된 스타일이 적용! */
+    .hello {
+      color: green;
+    }
+
+    div {
+      color: royalblue;
+    }
+
+    * {
+      color: darkblue;
+    }
+
+    body {
+      color: violet;
+    }
+
+  </style>
 </head>
 <body>
-  
+  <div id="hello" class="hello" style="color: olive;">
+    Hello world!
+  </div>
 </body>
 </html>
