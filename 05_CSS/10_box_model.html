@@ -79,6 +79,59 @@
       /* Tip! "가로 길이를 갖는" 블록 요소의 수평 가운데 정렬 */
       margin: 0 auto;
     }
+    .container-2 .item:last-child {
+      /* 내부 여백 지정 시 요소의 크기가 커짐 */
+      /* padding: 10px; */
+      /* padding: 10px 20px; */
+      /* padding: 10px 20px 30px; */
+      /* padding: 10px 20px 30px 40px; */
+      padding-left: 20px;
+    }
+
+    .container-3 .item {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+    }
+
+    .container-3 .item:nth-child(1) {
+      /* 실선 */
+      border: 10px solid;
+      /* padding과 마찬가지로 요소의 크기가 커짐 */
+      color: blue;
+      /* 지정된 색이 없으면 요소의 글꼴 색상이 적용 */
+      border: 10px solid gray;
+    }
+    .container-3 .item:nth-child(2) {
+      /* 파선 */
+      /* border: 10px dashed red; */
+      border: 10px dashed #ff0000;
+    }
+    .container-3 .item:nth-child(3) {
+      /* 점선 */
+      /* border: 10px dotted blue; */
+      /* border: 10px dotted #0000ff; */
+      /* border: 10px dotted rgb(0, 0, 255); */
+      border: 10px dotted rgba(0, 0, 255, 0.5);
+
+      border-width: 10px 20px;
+    }
+    .container-4 {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      margin: 20px;
+      /* border-radius: 20px; */
+      /* border-radius: 0 20px; */
+      /* border-radius: 0 20px 40px 60px; */
+
+      /* Tip! 원 만들기 */
+      /* border-radius: 50px; */
+      /* 요소의 길이가 바뀌면 같이 수정해야되는 문제
+        => 상대 단위를 쓰면 해결
+      */
+      border-radius: 50%;
+    }
   </style>
 </head>
 <body>
@@ -123,6 +176,15 @@
     <div class="item"></div>
   </div>
 
+  <h4>3. border 실습</h4>
+  <div class="container-3">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+
+  <h4>4. border-radius 실습</h4>
+  <div class="container-4"></div>
 
 </body>
 </html>
