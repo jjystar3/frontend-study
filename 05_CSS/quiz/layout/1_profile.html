@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .profile {
+      /* text-align: center; */
+    }
+    .profile>img {
+      /* (참고) img는 인라인 요소이지만 가로/세로 길이 지정 가능 */
+      width: 100px;
+      /* 요소를 원으로 만들기 */
+      border-radius: 50px;
+      /* 이미지 가운데 정렬하기(2가지) */
+      /* 1) 부모에 text-align */
+      /* 2) 가로 길이를 갖는 블록 요소에 margin: 0 auto */
+      display: block;
+      margin: 0 auto;
+    }
+    .title {
+      text-align: center;
+      font-size: 24px;
+    }
+    .content{
+      text-align: center;
+    }
+    .red {
+      color: red;
+      font-weight: 700;
+    }
+    .box {
+      width: 450px;;
+      background-color: cornflowerblue;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      border-radius: 5px;
+      margin: 0 auto;
+      box-shadow: 5px 5px black;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- div.profile>img -->
+  <div class="profile">
+    <img src="/05_CSS/images/logo.png" alt="프로필 이미지">
+  </div>
+
+  <!-- h3.title -->
+  <h3 class="title">JuYoung Jung</h3>
+
+  <!-- p.content -->
+  <p class="content">
+    <span class="red">Full Stack</span>    
+    Developer
+  </p>
+  
+  <!-- div.box -->
+  <div class="box">
+    안녕하세요. JuYoung Jung 입니다.<br>
+    현제 웹 프론트엔드/백엔드를 배우는 학생이며<br>
+    취미는 그림을 그리는 것입니다.
+  </div>
+</body>
+</html>
