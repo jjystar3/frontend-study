@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .text-input {
+      width: 120px;
+      padding: 10px;
+      font-size: 20px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.5s;
+    }
+    .text-input:focus {
+      border: 2px solid red;
+    }
+
+    /* 공통 스타일은 앞부분에 작성 */
+    /* 콤마를 써서 여러 개 동시 선택 가능 */
+    div, input, textarea {
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: none;
+    }
+    button{
+      cursor: pointer;
+    }
+
+    .form-background {
+      background-color: #333;
+      padding: 30px 0;
+    }
+    .form-container {
+      /* 가로 길이는 80%를 차지하다가 600px에서 더 이상 안늘어나도록 제한 */
+      background-color: #fff;
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    .text-input2 {
+      width: 100%;
+      padding: 10px;
+      font-size: 20px;
+      border: 2px solid #cccccc;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.5s;
+    }
+    .text-input2:focus {
+      border: 2px solid #777777;
+    }
+
+    .name {
+      display: flex;
+      column-gap: 20px;
+      justify-content: space-between;
+    }
+    .first-name {
+      width: 50%;
+    }
+    .last-name {
+      width: 50%;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .sendButton button {
+      border: none;
+      padding: 10px 40px 10px;
+      background-color: coral;
+      color: white;
+      border-radius: 5px;
+      transition: 0.5s;
+    }
+    .sendButton button:hover {
+      background-color: orangered;
+    }
+  </style>
+</head>
+<body>
+  <h2>연습</h2>
+  <form>
+    <input type="text">
+    <input type="text" class="text-input">
+    <button type="button">전송</button>
+
+    <br>
+
+    <!-- input 태그 쓸 때 label 태그도 같이 사용(권장) -->
+    <p>
+      <label for="name">Your Name</label>
+    </p>
+    <input type="text" id="name" class="text-input">
+  </form>
+  
+  <h2>실전</h2>
+  <!-- 박스부터 그려보기!! (불필요한 div는 생략 가능) -->
+  <div class="form-background">
+    <div class="form-container">
+      <form>
+        <h3>Contact Us</h3>
+        <p>
+          <label for="email">Your Email</label>
+        </p>
+        <input type="email" id="email" class="text-input2" placeholder="email@example.com">
+        <div class="name">
+          <div class="first-name">
+            <p>
+              <label for="firstName">First Name</label>
+            </p>
+            <input type="text" id="firstName" class="text-input2">
+          </div>
+          <div class="last-name">
+            <p>
+              <label for="lastName">Last Name</label>
+            </p>
+            <input type="text" id="lastName" class="text-input2">
+          </div>
+        </div>
+        <div class="message">
+          <p>
+            <label for="txtarea">Message</label>
+          </p>
+          <textarea name="" id="txtarea" class="text-input2"></textarea>
+        </div>
+        <div class="footer">
+          <div class="checkbox">
+            <input type="checkbox" id="check">
+            <label for="check">Agree</label>
+          </div>
+          <div class="sendButton">
+            <button type="button">SEND</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
