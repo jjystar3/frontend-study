@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div {
+      /* 전 상태 */
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    .test {
+      /* 전환 효과를 1초 동안 추가 */
+      /* transition: 1s; */
+      /* width값에만 전환 효과 추가(배경색은 확 바뀜) */
+      /* transition: width 1s; */
+      /* transition: background-color 1s; */
+      /* 지속 시간을 더 짧게 지정 */
+      /* transition: width 0.1s; */
+      /* 전환 효과 여러 개 설정하기 */
+      /* transition: 
+        width 0.5s,
+        background-color 2s; */
+      /* 대기 시간 지정 - 두 번째 시간은 대기 시간을 의미 */
+      transition: 1s 0.5s;      
+    }
+    .test:active {
+      /* 후 상태 */
+      width: 300px;
+      background-color: royalblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>transition(전환 효과)</h1>
+  <h2>요소의 전, 후 상태의 중간 단계를 자연스럽게 만들어주는 효과</h2>
+  <div class="test"></div>
+</body>
+</html>
