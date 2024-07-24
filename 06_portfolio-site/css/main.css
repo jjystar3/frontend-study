@@ -90,6 +90,7 @@ header nav ul li a:hover {
 /* ABOUT */
 .about {
   /* (주의) 100%는 부모의 가로 길이(<body>)가 기준이 됨 */
+  /* margin-top: 100%; */
   margin-top: 100vh;
   padding-top: 200px;
 }
