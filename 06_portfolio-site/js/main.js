@@ -10,3 +10,17 @@ spyEls.forEach(function (spyEl) {
   .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
   .addTo(new ScrollMagic.Controller());
 });
+
+// 모달창 띄우기
+let modalEl = document.querySelector('#modal');
+let modalBtn = document.querySelectorAll('.port .btn-modal');
+let closeBtn = document.querySelector('#modal .btn-close');
+console.log(modalBtn);
+
+modalBtn[0].addEventListener('click', function () {
+  // console.log('클릭됨');
+  modalEl.style.display = 'flex';
+});
+closeBtn.addEventListener('click', function () {
+  modalEl.style.display = 'none';
+});
