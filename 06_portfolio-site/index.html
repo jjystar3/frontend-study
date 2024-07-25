@@ -29,6 +29,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/main.css">
+
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script defer src="js/main.js"></script>
 </head>
 <body>
   <!-- 폰트 테스트 -->
@@ -65,13 +70,13 @@
    </section>
 
    <!-- ABOUT -->
-  <section id="ABOUT" class="about">
+  <section id="about" class="about">
     <div class="inner">
       <h2 class="title font-en">ABOUT</h2>
       <div class="about__wrapper">
         <div class="about__img">
           <!-- 본인 프로필 이미지로 변경 -->
-          <img src="images/profile_jjy.png" alt="프로필">
+          <img src="images/profile.jpg" alt="프로필">
         </div>
         <div class="about__text">
           <!-- 본인 슬로건, 이름(생년월), 교육 사항 등 작성 -->
@@ -86,6 +91,79 @@
           </div>
         </div>
       </div>
+
+      <!-- 연락처 버튼 -->
+      <div class="about__btn font-en">
+        <a href="#contact">
+          <img src="images/icon/icon_contact.png" alt="전화">CONTACT
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILL -->
+  <section id="skill" class="skill scroll-spy">
+    <div class="inner">
+      <h2 class="title font-en">SKILL</h2>
+      <ul class="skill__list">
+        <!-- 스킬 추가하려면 li 요소 복사 -->
+        <li>
+          <div class="font-en">
+            <p>Java</p>
+          </div>
+          <h3 class="font-en">Java<br>Programing</h3>
+          <ul>
+            <li>객체지향</li>
+            <li>람다식</li>
+            <li>파일 입출력</li>
+            <li>JDBC</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>Html</p>
+          </div>
+          <h3 class="font-en">HTML5</h3>
+          <ul>
+            <li>웹페이지 구조 설계</li>
+            <li>시맨틱 태그</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>Css</p>
+          </div>
+          <h3 class="font-en">CSS3</h3>
+          <ul>
+            <li>웹페이지 레이아웃 설계</li>
+            <li>웹페이지 디자인</li>
+            <li>반응형 제작</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>Js</p>
+          </div>
+          <h3 class="font-en">JavaScript</h3>
+          <ul>
+            <li>DOM 조작, 제어</li>
+            <li>이벤트 처리</li>
+            <li>비동기 통신</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>React</p>
+          </div>
+          <h3 class="font-en">React JS</h3>
+          <ul>
+            <li>SPA 개발</li>
+            <li>전역 상태 관리</li>
+            <li>클라이언트 라우팅</li>
+            <li>CSR 방식 앱개발</li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </section>
 </body>

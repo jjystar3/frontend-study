@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+html {
+  /* 스크롤 이동을 부드럽게 */
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
@@ -36,6 +41,21 @@ img {
   display: block;
 }
 
+.title {
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.title::after {
+  content: ""; /* 필수 속성 */
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #333;
+  margin: 24px auto 0;
+}
+
 /* HEADER */
 header {
   background-color: #fff;
@@ -55,6 +75,7 @@ header > .inner {
 header .logo img {
   width: 40px;
   /* 가로 너비만 지정하면 세로 높이는 비율에 맞춰 정해짐 */
+  margin: 0 10px;
 }
 header nav ul {
   display: flex;
@@ -96,6 +117,7 @@ header nav ul li a:hover {
 }
 .about .inner {
   padding-bottom: 30px;
+  position: relative;
 }
 .about .about__wrapper {
   display: flex;
@@ -114,4 +136,67 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.about .about__wrapper .about__text .slogan {
+  font-weight: bold;
+  font-size: 35px;
+}
+.about .about__wrapper .about__text h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.about .about__wrapper .about__text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.about .about__wrapper .about__text li {
+  line-height: 1.8;
+}
+.about .about__btn {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+}
+.about .about__btn img {
+  display: inline;
+  width: 28px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* SKILL */
+.skill {
+  padding-top: 200px;
+}
+.skill .skill__list {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.skill .skill__list > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill .skill__list li div {
+  width: 80px;
+  height: 50px;
+  background-color: #b9e3f9;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  transition: 0.5s;
+}
+.skill .skill__list li:hover div {
+  transform: rotate(0deg);
+}
+.skill .skill__list li div p {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+.skill .skill__list li h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 30px 0 20px;
 }
