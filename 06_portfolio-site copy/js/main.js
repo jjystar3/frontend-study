@@ -5,11 +5,13 @@ console.log(spyEls);
 spyEls.forEach(function (spyEl) {
   new ScrollMagic.Scene({ // 감시할 장면 추가 및 옵션 지정
     triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
-    triggerHook: 0.75// 화면의 50% 지점에서 보여짐 여부 감시(0~1사이 지정)
+    triggerHook: 0.5// 화면의 50% 지점에서 보여짐 여부 감시(0~1사이 지정)
   })
   .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
   .addTo(new ScrollMagic.Controller());
 });
+
+
 
 // 모달창 띄우기
 let modalEl = document.querySelector('#modal');
@@ -35,6 +37,8 @@ thisYear.textContent = new Date().getFullYear();
 
 // 페이지 최상단으로 이동
 let toTopBtn = document.querySelector('#to-top');
+let bgImg = document.querySelector('.bg-img');
+console.log(bgImg);
 
 // 페이지에 스크롤 이벤트 감지를 추가
 // window: 브라우저 창 객체
@@ -51,5 +55,10 @@ window.addEventListener('scroll', function () {
     // toTopBtn.style.display = 'none';
     toTopBtn.style.opacity = 0;
     toTopBtn.style.transform = 'translateX(100px)';
+  }
+  if(window.scrollY > 1000){    
+    bgImg.style.filter = 'blur(10px)';
+  }else{
+    bgImg.style.filter = 'blur(0)';
   }
 });
