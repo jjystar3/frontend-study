@@ -56,7 +56,7 @@ window.addEventListener('scroll', function () {
     toTopBtn.style.opacity = 0;
     toTopBtn.style.transform = 'translateX(100px)';
   }
-  if(window.scrollY > 1000){    
+  if(window.scrollY > 500){    
     bgImg.style.filter = 'blur(10px)';
   }else{
     bgImg.style.filter = 'blur(0)';
