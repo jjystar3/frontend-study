@@ -13,8 +13,10 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
-  color: #eee;
-  background-color: #07090a;
+  color: #333;
+  background-color: #fff8e8;
+  /* color: #eee;
+  background-color: #07090a; */
   overflow-x: hidden;
 }
 
