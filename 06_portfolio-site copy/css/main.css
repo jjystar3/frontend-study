@@ -86,7 +86,7 @@ img {
 /* HEADER */
 header {
   /* background-color: #202020; */
-  border-bottom: 1px solid #c8c8c8;
+  /* border-bottom: 1px solid #c8c8c8; */
   /* 고정된 헤더 만들기 */
   height: 100%;
   position: fixed;
@@ -146,7 +146,7 @@ header nav ul li a:hover {
   position: absolute;
   width: 100%;
   height:100%;
-  opacity: 0;
+  opacity: 1;
 }
 .visual img {
   width: 100%;
@@ -179,16 +179,17 @@ header nav ul li a:hover {
   /* (주의) 100%는 부모의 가로 길이(<body>)가 기준이 됨 */
   /* margin-top: 100%; */
   /* margin-top: 100vh; */
+  margin-top: 200px;
   padding-top: 200px;
 }
 .about .inner {
   padding-bottom: 30px;
   position: relative;
 }
-.about .about__wrapper {
-  /* display: flex;
-  justify-content: space-between; */
-}
+/* .about .about__wrapper {
+  display: flex;
+  justify-content: space-between;
+} */
 
 .about .about__wrapper .about__img {
   width: 20%;
@@ -274,6 +275,7 @@ header nav ul li a:hover {
 
 /* SKILL */
 .skill {
+  margin-top: 200px;
   padding-top: 200px;
 }
 .skill .skill__list {
@@ -282,56 +284,48 @@ header nav ul li a:hover {
   text-align: center;
 }
 .skill .skill__list > li {
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* 애니메이션 효과 추가 */
-  opacity: 0;
+  transition: 0.3s;
+}
+.skill .skill__list > li:hover {
+  transform: translateY(-15px);
+}
+.skill .skill__list li > div {
+  width: 100%;
+  height: 100%;
+  padding: 20px 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
   transition: 0.5s;
-  /* 방법1: position */
-  /* position: relative;
-  top: 100px; */
-  /* 방법2: transform */
+  opacity: 0;
   transform: translateY(100px);
 }
-.skill.show .skill__list > li {
+.skill.show .skill__list li > div {
   opacity: 1;
-  /* 방법1: position */
-  /* top: 0; */
-  /* 방법2: transform */
   transform: translateY(0);
 }
-.skill .skill__list > li:nth-child(1) {
+.skill .skill__list > li:nth-child(1) > div {
   transition-delay: 0.1s;
 }
-.skill .skill__list > li:nth-child(2) {
+.skill .skill__list > li:nth-child(2) > div {
   transition-delay: 0.2s;
 }
-.skill .skill__list > li:nth-child(3) {
+.skill .skill__list > li:nth-child(3) > div {
   transition-delay: 0.3s;
 }
-.skill .skill__list > li:nth-child(4) {
+.skill .skill__list > li:nth-child(4) > div {
   transition-delay: 0.4s;
 }
-.skill .skill__list > li:nth-child(5) {
+.skill .skill__list > li:nth-child(5) > div {
   transition-delay: 0.5s;
 }
-.skill .skill__list li div {
-  width: 80px;
+.skill .skill__list li img {
+  width: 50px;
   height: 50px;
-  background-color: royalblue;
-  border-radius: 50%;
-  transform: rotate(-20deg);
-  transition: 0.5s;
-}
-.skill .skill__list li:hover div {
-  transform: rotate(0deg);
-}
-.skill .skill__list li div p {
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: -2px;
+  margin: 0 auto;
 }
 .skill .skill__list li h3 {
   font-size: 18px;
@@ -341,6 +335,7 @@ header nav ul li a:hover {
 
 /* WORK */
 .work {
+  margin-top: 200px;
   padding-top: 200px;
 }
 .work .port {
@@ -379,7 +374,9 @@ header nav ul li a:hover {
 
 /* CONTACT */
 .contact {
-  padding: 200px 0;
+  margin-top: 200px;
+  padding-top: 200px;
+  padding-bottom: 160px;
 }
 .contact .contact__info li {
   line-height: 2;
@@ -479,7 +476,7 @@ footer .copyright {
 #to-top {
   width: 42px;
   height: 42px;
-  background-color: #fff8e8;
+  /* background-color: #333; */
   border: 2px solid #333;
   border-radius: 10px;
   cursor: pointer;
