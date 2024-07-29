@@ -1,6 +1,5 @@
 // ScrollMagic 사용법
-// let spyEls = document.querySelectorAll('section.scroll-spy');
-// console.log(spyEls);
+let spyEls = document.querySelectorAll('.scroll-spy');
 
 // spyEls.forEach(function (spyEl) {
 //   new ScrollMagic.Scene({ // 감시할 장면 추가 및 옵션 지정
@@ -10,6 +9,18 @@
 //   .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
 //   .addTo(new ScrollMagic.Controller());
 // });
+
+
+spyEls.forEach(function (spyEl) {
+  new ScrollMagic.Scene({
+    triggerElement: spyEl,
+    triggerHook: 0.5,
+    duration: "100%",
+    offset: 50
+  })
+  .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
+  .addTo(new ScrollMagic.Controller());
+});
 
 // 모달창 띄우기
 let modalEl = document.querySelector('#modal');
@@ -73,7 +84,7 @@ $(document).ready(function() {
 
       // $('#scrollPercentLabel>span').html(scrollPercentRounded);
       // console.log(scrollPercentRounded);
-      // bgDay.style.opacity = 1 - (scrollPercentRounded * 0.01);
+      bgDay.style.opacity = 1 - (scrollPercentRounded * 0.01);
       bgNight.style.opacity = scrollPercentRounded * 0.01;
 
       if(scrollPercentRounded < 10 || scrollPercentRounded > 90){
@@ -81,13 +92,6 @@ $(document).ready(function() {
       }else{
         bgImg.style.filter = 'blur(10px)';  
       }
-
-      if (checkVisible($('.skill-spy'))) {
-        $('.skill').addClass("show");
-      } else {
-        $('.skill').removeClass("show");
-      }
-
       repositionLabel();
   });
 
@@ -106,25 +110,3 @@ $(document).ready(function() {
   repositionLabel();
 
 });
-
-
-// $(window).scroll(function() {
-//   if (checkVisible($('section.scroll-spy'))) {
-    
-//       element.classList.add("show");
-//   } else {
-    
-//   }
-// });
-
-
-function checkVisible( elm, eval ) {
-  eval = eval || "visible";
-  var vpH = $(window).height(), // Viewport Height
-      st = $(window).scrollTop(), // Scroll Top
-      y = $(elm).offset().top,
-      elementHeight = $(elm).height();
-  
-  if (eval == "visible") return ((y < (vpH + st)) && (y > (st - elementHeight)));
-  if (eval == "above") return ((y < (vpH + st)));
-}
