@@ -11,10 +11,6 @@
 //   .addTo(new ScrollMagic.Controller());
 // });
 
-
-
-
-
 // 모달창 띄우기
 let modalEl = document.querySelector('#modal');
 let modalBtn = document.querySelectorAll('.port .btn-modal');
@@ -87,9 +83,9 @@ $(document).ready(function() {
       }
 
       if (checkVisible($('.skill-spy'))) {
-        $('.skill-spy').addClass("show");
+        $('.skill').addClass("show");
       } else {
-        $('.skill-spy').removeClass("show");
+        $('.skill').removeClass("show");
       }
 
       repositionLabel();
