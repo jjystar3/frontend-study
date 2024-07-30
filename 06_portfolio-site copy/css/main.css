@@ -6,6 +6,7 @@
 html {
   /* 스크롤 이동을 부드럽게 */
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body {
@@ -16,6 +17,10 @@ body {
   color: #eee;
   background-color: #07090a;
   overflow-x: hidden;
+}
+
+section {
+  scroll-snap-align: start;
 }
 
 /* 영문에만 적용할 폰트 */
