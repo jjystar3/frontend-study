@@ -27,27 +27,24 @@
   <!-- HEADER -->
   <header>
     <div class="inner">
-      <!-- 로고 -->
-      <!-- <a href="index.html" class="logo"> -->
-      <a href="#main" class="logo">
-        <img src="images/logo_jjy.png" alt="로고">
-      </a>
+      <div class="header_logo">
+        <a href="#main" class="logo">
+          <img src="images/logo_jjy.png" alt="로고">
+        </a>
+      </div>
 
-      <!-- 메뉴 -->
       <nav class="font-en">
         <ul>
-          <!-- 본인의 메뉴 구조에 맞게 변경 -->
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#skill">SKILL</a></li>
-          <li><a href="#work">WORK</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+          <li class="header_about"><a href="#about">ABOUT</a></li>
+          <li class="header_skill"><a href="#skill">SKILL</a></li>
+          <li class="header_work"><a href="#work">WORK</a></li>
+          <li class="header_contact"><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- VISUAL -->
-  <!-- 배경 비디오 적용(또는 슬라이드로 만들고 싶으면 swiper 참고) -->
    <section class="visual">
     <div class="bg-img">
       <div class="bg-day">
@@ -76,7 +73,6 @@
       <div class="about__wrapper">
 
         <div class="about__img">
-          <!-- 본인 프로필 이미지로 변경 -->
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
@@ -91,7 +87,6 @@
         
 
         <div class="about__text">
-          <!-- 본인 슬로건, 이름(생년월), 교육 사항 등 작성 -->
           <strong class="slogan">"항상 창작하는 개발자"</strong>
           <h3 class="font-en">Jeong Ju Young</h3>
           <div>
@@ -104,7 +99,6 @@
         </div>
       </div>
 
-      <!-- 연락처 버튼 -->
       <div class="about__btn font-en">
         <a href="#contact">
           <img src="images/icon/icon_contact.png" alt="전화">CONTACT
@@ -189,11 +183,11 @@
     <div class="inner">
       <h2 class="title">WORK</h2>
       <div class="port">
-        <div class="port__img">
+        <div class="port__img" style="transition-delay: 0.1s;">
           <img src="images/work_1.jpg" alt="포트폴리오1">
         </div>
-        <div class="port__text">
-          <h3>프로젝트명</h3>
+        <div class="port__text" style="transition-delay: 0.1s;">
+          <h3>프로젝트 1</h3>
           <ul>
             <li><span>주요 기능 : </span>주요 기능 설명</li>
             <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
@@ -202,17 +196,17 @@
           </ul>
           <div class="btn-group">
             <a href="javascript:void(0)" target="_blank" class="btn">README</a>
-            <a href="javascript:void(0)" class="btn btn--brown btn-modal">모달</a>
+            <a href="javascript:void(0)" class="btn btn--brown btn-modal">DETAIL</a>
           </div>
         </div>
       </div>
 
       <div class="port">
-        <div class="port__img">
+        <div class="port__img" style="transition-delay: 0.4s;">
           <img src="images/work_2.jpg" alt="포트폴리오2">
         </div>
-        <div class="port__text">
-          <h3>프로젝트명</h3>
+        <div class="port__text" style="transition-delay: 0.4s;">
+          <h3>프로젝트 2</h3>
           <ul>
             <li><span>주요 기능 : </span>주요 기능 설명</li>
             <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
@@ -221,7 +215,7 @@
           </ul>
           <div class="btn-group">
             <a href="javascript:void(0)" target="_blank" class="btn">README</a>
-            <a href="javascript:void(0)" class="btn btn--brown btn-modal">모달</a>
+            <a href="javascript:void(0)" class="btn btn--brown btn-modal">DETAIL</a>
           </div>
         </div>
       </div>

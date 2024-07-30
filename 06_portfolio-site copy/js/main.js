@@ -1,6 +1,7 @@
 // ScrollMagic 사용법
 let spyEls = document.querySelectorAll('.scroll-spy');
 
+
 spyEls.forEach(function (spyEl) {
   new ScrollMagic.Scene({
     triggerElement: spyEl,
@@ -12,7 +13,23 @@ spyEls.forEach(function (spyEl) {
   .addTo(new ScrollMagic.Controller());
 });
 
+let controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: 0.5, duration: "100%", offset: 50}});
 
+new ScrollMagic.Scene({triggerElement: "#main"})
+  .setClassToggle(".header_logo", "active")
+  .addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#about"})
+  .setClassToggle(".header_about", "active")
+  .addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#skill"})
+  .setClassToggle(".header_skill", "active")
+  .addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#work"})
+  .setClassToggle(".header_work", "active")
+  .addTo(controller);
+new ScrollMagic.Scene({triggerElement: "#contact"})
+  .setClassToggle(".header_contact", "active")
+  .addTo(controller);
 
 // 모달창 띄우기
 let modalBtn = document.querySelectorAll('.port .btn-modal');
@@ -70,6 +87,7 @@ let bgDay = document.querySelector('.bg-day');
 let bgNight = document.querySelector('.bg-night');
 
 let bgImg = document.querySelector('.bg-img');
+
 
 $(document).ready(function() {
 
