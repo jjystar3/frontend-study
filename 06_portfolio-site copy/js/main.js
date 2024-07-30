@@ -10,7 +10,6 @@ let spyEls = document.querySelectorAll('.scroll-spy');
 //   .addTo(new ScrollMagic.Controller());
 // });
 
-
 spyEls.forEach(function (spyEl) {
   new ScrollMagic.Scene({
     triggerElement: spyEl,
@@ -23,17 +22,34 @@ spyEls.forEach(function (spyEl) {
 });
 
 // 모달창 띄우기
-let modalEl = document.querySelector('#modal');
 let modalBtn = document.querySelectorAll('.port .btn-modal');
-let closeBtn = document.querySelector('#modal .btn-close');
-console.log(modalBtn);
+let modal1El = document.querySelector('#modal1');
+let closeBtn1 = document.querySelector('#modal1 .btn-close');
+let modal2El = document.querySelector('#modal2');
+let closeBtn2 = document.querySelector('#modal2 .btn-close');
+// console.log(modalBtn);
 
 modalBtn[0].addEventListener('click', function () {
   // console.log('클릭됨');
-  modalEl.style.display = 'flex';
+  // modalEl.style.display = 'flex';
+  modal1El.style.opacity = 1;
+  modal1El.style.zIndex = 999;
 });
-closeBtn.addEventListener('click', function () {
-  modalEl.style.display = 'none';
+modalBtn[1].addEventListener('click', function () {
+  // console.log('클릭됨');
+  // modalEl.style.display = 'flex';
+  modal2El.style.opacity = 1;
+  modal2El.style.zIndex = 999;
+});
+closeBtn1.addEventListener('click', function () {
+  // modalEl.style.display = 'none';
+  modal1El.style.opacity = 0;
+  modal1El.style.zIndex = -999;
+});
+closeBtn2.addEventListener('click', function () {
+  // modalEl.style.display = 'none';
+  modal2El.style.opacity = 0;
+  modal2El.style.zIndex = -999;
 });
 
 // 현재 연도 표시
@@ -76,11 +92,11 @@ let bgImg = document.querySelector('.bg-img');
 $(document).ready(function() {
 
   $(window).scroll(function(e){
-    var scrollTop = $(window).scrollTop();
-    var docHeight = $(document).height();
-    var winHeight = $(window).height();
-    var scrollPercent = (scrollTop) / (docHeight - winHeight);
-    var scrollPercentRounded = Math.round(scrollPercent*100);
+    let scrollTop = $(window).scrollTop();
+    let docHeight = $(document).height();
+    let winHeight = $(window).height();
+    let scrollPercent = (scrollTop) / (docHeight - winHeight);
+    let scrollPercentRounded = Math.round(scrollPercent*100);
 
       // $('#scrollPercentLabel>span').html(scrollPercentRounded);
       // console.log(scrollPercentRounded);
