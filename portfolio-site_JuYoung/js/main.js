@@ -34,23 +34,31 @@ new ScrollMagic.Scene({triggerElement: "#contact"})
 let modalBtn = document.querySelectorAll('.port .btn-modal');
 let modal1El = document.querySelector('#modal1');
 let closeBtn1 = document.querySelector('#modal1 .btn-close');
+let video1 = document.querySelector('#video1');
 let modal2El = document.querySelector('#modal2');
 let closeBtn2 = document.querySelector('#modal2 .btn-close');
+let video2 = document.querySelector('#video2');
 // console.log(modalBtn);
 
 modalBtn[0].addEventListener('click', function () {
   // console.log('클릭됨');
   modal1El.style.display = 'flex';
+  video1.play();
 });
 modalBtn[1].addEventListener('click', function () {
   // console.log('클릭됨');
   modal2El.style.display = 'flex';
+  video2.play();
 });
 closeBtn1.addEventListener('click', function () {
   modal1El.style.display = 'none';
+  video1.pause();
+  video1.currentTime = 0;
 });
 closeBtn2.addEventListener('click', function () {
   modal2El.style.display = 'none';
+  video2.pause();
+  video2.currentTime = 0;
 });
 
 // 현재 연도 표시
