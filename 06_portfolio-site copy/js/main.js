@@ -1,15 +1,6 @@
 // ScrollMagic 사용법
 let spyEls = document.querySelectorAll('.scroll-spy');
 
-// spyEls.forEach(function (spyEl) {
-//   new ScrollMagic.Scene({ // 감시할 장면 추가 및 옵션 지정
-//     triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
-//     triggerHook: 0.5// 화면의 50% 지점에서 보여짐 여부 감시(0~1사이 지정)
-//   })
-//   .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
-//   .addTo(new ScrollMagic.Controller());
-// });
-
 spyEls.forEach(function (spyEl) {
   new ScrollMagic.Scene({
     triggerElement: spyEl,
@@ -17,9 +8,11 @@ spyEls.forEach(function (spyEl) {
     duration: "100%",
     offset: 50
   })
-  .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show 클래스 추가
+  .setClassToggle(spyEl, 'show')
   .addTo(new ScrollMagic.Controller());
 });
+
+
 
 // 모달창 띄우기
 let modalBtn = document.querySelectorAll('.port .btn-modal');
@@ -31,25 +24,17 @@ let closeBtn2 = document.querySelector('#modal2 .btn-close');
 
 modalBtn[0].addEventListener('click', function () {
   // console.log('클릭됨');
-  // modalEl.style.display = 'flex';
-  modal1El.style.opacity = 1;
-  modal1El.style.zIndex = 999;
+  modal1El.style.display = 'flex';
 });
 modalBtn[1].addEventListener('click', function () {
   // console.log('클릭됨');
-  // modalEl.style.display = 'flex';
-  modal2El.style.opacity = 1;
-  modal2El.style.zIndex = 999;
+  modal2El.style.display = 'flex';
 });
 closeBtn1.addEventListener('click', function () {
-  // modalEl.style.display = 'none';
-  modal1El.style.opacity = 0;
-  modal1El.style.zIndex = -999;
+  modal1El.style.display = 'none';
 });
 closeBtn2.addEventListener('click', function () {
-  // modalEl.style.display = 'none';
-  modal2El.style.opacity = 0;
-  modal2El.style.zIndex = -999;
+  modal2El.style.display = 'none';
 });
 
 // 현재 연도 표시
@@ -79,10 +64,7 @@ window.addEventListener('scroll', function () {
     toTopBtn.style.opacity = 0;
     toTopBtn.style.transform = 'translateX(100px)';
   }
-
-
 });
-
 
 let bgDay = document.querySelector('.bg-day');
 let bgNight = document.querySelector('.bg-night');
