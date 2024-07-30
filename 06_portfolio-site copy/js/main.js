@@ -1,7 +1,6 @@
 // ScrollMagic 사용법
 let spyEls = document.querySelectorAll('.scroll-spy');
 
-
 spyEls.forEach(function (spyEl) {
   new ScrollMagic.Scene({
     triggerElement: spyEl,
@@ -85,9 +84,7 @@ window.addEventListener('scroll', function () {
 
 let bgDay = document.querySelector('.bg-day');
 let bgNight = document.querySelector('.bg-night');
-
 let bgImg = document.querySelector('.bg-img');
-
 
 $(document).ready(function() {
 
