@@ -1,4 +1,4 @@
-// ScrollMagic 사용법
+
 let spyEls = document.querySelectorAll('.scroll-spy');
 
 spyEls.forEach(function (spyEl) {
@@ -38,15 +38,12 @@ let video1 = document.querySelector('#video1');
 let modal2El = document.querySelector('#modal2');
 let closeBtn2 = document.querySelector('#modal2 .btn-close');
 let video2 = document.querySelector('#video2');
-// console.log(modalBtn);
 
 modalBtn[0].addEventListener('click', function () {
-  // console.log('클릭됨');
   modal1El.style.display = 'flex';
   video1.play();
 });
 modalBtn[1].addEventListener('click', function () {
-  // console.log('클릭됨');
   modal2El.style.display = 'flex';
   video2.play();
 });
