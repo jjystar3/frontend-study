@@ -53,3 +53,29 @@ window.addEventListener('scroll', function () {
     toTopBtn.style.transform = 'translateX(100px)';
   }
 });
+
+// 모바일용 메뉴
+let btnHamburger = document.querySelector('.btn-hamburger');
+let navEl = document.querySelector('header nav');
+let menuItems = document.querySelectorAll('header nav ul li a');
+console.log(menuItems);
+
+
+btnHamburger.addEventListener('click', function () {
+  // JS로 클래스를 제어하는 메소드
+  // add()/remove()/toggle()/contains()
+
+  // if(navEl.classList.contains('active')){
+  //   navEl.classList.remove('active');
+  // } else {
+  //   navEl.classList.add('active');
+  // }
+
+  navEl.classList.toggle('active');
+});
+
+menuItems.forEach(function (menuItem) {
+  menuItem.addEventListener('click', function () {
+    navEl.classList.remove('active');
+  });
+});

@@ -435,4 +435,40 @@ footer .copyright {
   .title:after {
     width: 60px;
   }
+
+  header .btn-hamburger {
+    display: block;
+  }
+  header nav {
+    /* nav 디자인 및 배치 */
+    background-color: #fff8e8;
+    color: #333;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    /* display: none; */
+    height: 0;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  header nav.active {
+    /* display: block; */
+    height: 100%;
+  }
+  header nav ul {
+    /* ul 태그를 원래 보여짐 특성인 블록으로 원복 */
+    display: block;
+    padding-top: 60px;
+  }
+  header nav ul li {
+    padding: 10px 80px;
+    font-size: 30px;
+  }
+  header nav ul li a {
+    transition: 0.5s;
+  }
+  header nav ul li a:hover {
+    letter-spacing: 20px;
+  }
 }
