@@ -112,6 +112,14 @@ header nav ul li a:hover {
   color: orange;
   /* text-shadow: 1px 1px 5px #333; */
 }
+header .btn-hamburger {
+  display: none;
+}
+header .btn-hamburger .material-symbols-outlined {
+  color: #333;
+  font-size: 40px;
+  line-height: normal;
+}
 
 /* VISUAL */
 .visual {
@@ -411,4 +419,20 @@ footer .copyright {
   /* 처음 상태는 투명에 x축으로 +100px 지점 */
   opacity: 0;
   transform: translateX(100px);
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+  /* 모바일에서는 화면의 80%만 차지하도록 */
+  .inner {
+    width: 80%;
+  }
+
+  .title {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+  .title:after {
+    width: 60px;
+  }
 }
