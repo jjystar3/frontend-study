@@ -471,4 +471,48 @@ footer .copyright {
   header nav ul li a:hover {
     letter-spacing: 20px;
   }
+
+  .about {
+    padding-top: 100px;
+  }
+  .about .about__wrapper {
+    flex-direction: column;
+  }
+  .about .about__wrapper .about__img {
+    width: 100%;
+  }
+  .about .about__wrapper .about__text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skill {
+    padding-top: 100px;
+  }
+  .skill .skill__list {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .work {
+    padding-top: 100px;
+  }
+  .work .port {
+    flex-direction: column;
+    margin: 40px 0;
+  }
+  .work .port .port__img,
+  .work .port .port__text {
+    width: 100%;
+  }
+  .work .port .port__text {
+    padding: 20px 0 0;
+  }
+  .work .port .btn-group {
+    margin-top: 20px;
+  }
+
+  .contact {
+    padding: 100px 0;
+  }
 }
